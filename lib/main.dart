@@ -37,10 +37,12 @@ class _BallState extends State<Ball> {
         children: <Widget>[
           Expanded(
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                print('Dirty');
+              },
               child: Image.asset('images/ball1.png'),
             ),
-          )
+          ),
         ],
       ),
     );
