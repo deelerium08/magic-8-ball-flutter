@@ -41,8 +41,10 @@ class _BallState extends State<Ball> {
           Expanded(
             child: TextButton(
               onPressed: () {
-                ballNumber = Random().nextInt(4);
-                print(ballNumber);
+                setState(() {
+                  ballNumber = Random().nextInt(5) + 1;
+                  print(ballNumber);
+                });
               },
               child: Image.asset('images/ball$ballNumber.png'),
             ),
